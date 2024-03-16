@@ -8,11 +8,9 @@ public class Customer {
         this.customerName = customerName;
         this.dietPlan = dietPlan;
     }
-
     public String getCustomerName(){
         return customerName;
     }
-
     public String getDietPlan(){
         return dietPlan;
     }

@@ -4,7 +4,7 @@ import Part_2_Macronutrients.FoodOptions.*;
 
 public class VeganCarbs implements CarbsFactory{
     private static VeganCarbs instance;
-
+    private VeganCarbs () {}
     public static VeganCarbs getInstance() {
         if (instance == null) {
             instance = new VeganCarbs();
@@ -12,10 +12,9 @@ public class VeganCarbs implements CarbsFactory{
         return instance;
     }
 
-    // default
     @Override
     public Food createCarbs() {
-        int random = (int) (Math.random() * 2); // Number of available fat options
+        int random = (int) (Math.random() * 2);
         switch (random) {
             case 0:
                 return new Bread();
@@ -24,7 +23,7 @@ public class VeganCarbs implements CarbsFactory{
             case 2:
                 return new Pistachio();
             default:
-                return null; // Handle error or return a default food
+                return null;
         }
     }
 }

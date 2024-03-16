@@ -13,21 +13,26 @@ import Part_2_Macronutrients.Protein.Protein;
 import Part_2_Macronutrients.Protein.VeganProtein;
 
 public class VeganFactory implements MacronutrientFactory{
+    private static VeganFactory instance;
+    private VeganFactory() {}
+    public static VeganFactory getInstance() {
+        if (instance == null) {
+            instance = new VeganFactory();
+        }
+        return instance;
+    }
     @Override
     public Carbs createCarbsFactory() {
         return null;
     }
-
     @Override
     public PaleoCarbs createPaleoCarbsFactory() {
         return null;
     }
-
     @Override
     public VeganCarbs createVeganCarbsFactory() {
         return VeganCarbs.getInstance();
     }
-
     @Override
     public NutAllergyCarbs createNutAllergyCarbsFactory() {
         return null;
@@ -37,12 +42,10 @@ public class VeganFactory implements MacronutrientFactory{
     public Protein createProteinFactory() {
         return null;
     }
-
     @Override
     public PaleoProtein createPaleoProteinFactory() {
         return null;
     }
-
     @Override
     public VeganProtein createVeganProteinFactory() {
         return VeganProtein.getInstance();
@@ -53,17 +56,14 @@ public class VeganFactory implements MacronutrientFactory{
     public Fats createFatsFactory() {
         return null;
     }
-
     @Override
     public PaleoFats createPaleoFatsFactory() {
         return null;
     }
-
     @Override
     public VeganFats createVeganFatsFactory() {
         return VeganFats.getInstance();
     }
-
     @Override
     public NutAllergyFats createNutAllergyFatsFactory() {
         return null;

@@ -9,8 +9,6 @@ import Part_2_Macronutrients.Protein.ProteinFactory;
 
 public class Driver {
     public static void main(String[] args) {
-
-
         Customer[] customers = {
                 new Customer("Bob", "No Restriction"),
                 new Customer("Sam", "Paleo"),
@@ -74,9 +72,6 @@ public class Driver {
                 System.out.println("Customer Name: " + customer.getCustomerName() + "\nDiet Plan: " + customer.getDietPlan());
                 meal.display();
             }
-
-
-//
         }
     }
 }

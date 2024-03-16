@@ -4,6 +4,7 @@ import Part_2_Macronutrients.FoodOptions.*;
 
 public class VeganProtein implements ProteinFactory{
     private static VeganProtein instance;
+    private VeganProtein() {}
 
     public static VeganProtein getInstance() {
         if (instance == null) {
@@ -12,7 +13,6 @@ public class VeganProtein implements ProteinFactory{
         return instance;
     }
 
-    // default
     @Override
     public Food createProtein() {
         return new Tofu();

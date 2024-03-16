@@ -1,11 +1,8 @@
 package Part_2_Macronutrients.Carbs;
-
 import Part_2_Macronutrients.FoodOptions.*;
 
-// Singleton implementation of CarbsFactory
 public class Carbs implements CarbsFactory {
     private static Carbs instance;
-
     private Carbs() {}
 
     public static Carbs getInstance() {
@@ -17,7 +14,7 @@ public class Carbs implements CarbsFactory {
 
     @Override
     public Food createCarbs() {
-        int random = (int) (Math.random() * 2); // Number of available fat options
+        int random = (int) (Math.random() * 2);
         switch (random) {
             case 0:
                 return new Cheese();
@@ -28,7 +25,7 @@ public class Carbs implements CarbsFactory {
             case 3:
                 return new Pistachio();
             default:
-                return null; // Handle error or return a default food
+                return null;
         }
     }
 }

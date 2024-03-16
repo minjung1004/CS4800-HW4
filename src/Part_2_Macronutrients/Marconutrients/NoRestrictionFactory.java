@@ -28,17 +28,14 @@ public class NoRestrictionFactory implements MacronutrientFactory {
     public Carbs createCarbsFactory() {
         return Carbs.getInstance();
     }
-
     @Override
     public PaleoCarbs createPaleoCarbsFactory() {
         return null;
     }
-
     @Override
     public VeganCarbs createVeganCarbsFactory() {
         return null;
     }
-
     @Override
     public NutAllergyCarbs createNutAllergyCarbsFactory() {
         return null;
@@ -48,12 +45,10 @@ public class NoRestrictionFactory implements MacronutrientFactory {
     public Protein createProteinFactory() {
         return Protein.getInstance();
     }
-
     @Override
     public PaleoProtein createPaleoProteinFactory() {
         return null;
     }
-
     @Override
     public VeganProtein createVeganProteinFactory() {
         return null;
@@ -64,17 +59,14 @@ public class NoRestrictionFactory implements MacronutrientFactory {
     public Fats createFatsFactory() {
         return Fats.getInstance();
     }
-
     @Override
     public PaleoFats createPaleoFatsFactory() {
         return null;
     }
-
     @Override
     public VeganFats createVeganFatsFactory() {
         return null;
     }
-
     @Override
     public NutAllergyFats createNutAllergyFatsFactory() {
         return null;

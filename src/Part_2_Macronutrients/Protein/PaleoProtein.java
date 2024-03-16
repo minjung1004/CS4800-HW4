@@ -1,10 +1,10 @@
 package Part_2_Macronutrients.Protein;
 
 import Part_2_Macronutrients.FoodOptions.*;
-import Part_2_Macronutrients.Marconutrients.PaleoFactory;
 
 public class PaleoProtein implements ProteinFactory {
     private static PaleoProtein instance;
+    private PaleoProtein() {}
 
     public static PaleoProtein getInstance() {
         if (instance == null) {
@@ -12,11 +12,9 @@ public class PaleoProtein implements ProteinFactory {
         }
         return instance;
     }
-
-    // default
     @Override
     public Food createProtein() {
-        int random = (int) (Math.random() * 2); // Number of available fat options
+        int random = (int) (Math.random() * 2);
         switch (random) {
             case 0:
                 return new Fish();
@@ -25,7 +23,7 @@ public class PaleoProtein implements ProteinFactory {
             case 2:
                 return new Beef();
             default:
-                return null; // Handle error or return a default food
+                return null;
         }
     }
 }

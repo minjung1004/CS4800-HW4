@@ -2,10 +2,9 @@ package Part_2_Macronutrients.Fats;
 
 import Part_2_Macronutrients.FoodOptions.*;
 
-// Singleton implementation for FatsFactory
+
 public class Fats implements FatsFactory {
     private static Fats instance;
-
     private Fats() {}
 
     public static Fats getInstance() {
@@ -16,9 +15,7 @@ public class Fats implements FatsFactory {
     }
     @Override
     public Food createFats() {
-       // return null;
-        //return fat foods item\
-        int random = (int) (Math.random() * 2); // Number of available fat options
+        int random = (int) (Math.random() * 2);
         switch (random) {
             case 0:
                 return new Avocado();
@@ -29,7 +26,7 @@ public class Fats implements FatsFactory {
             case 3:
                 return new Peanuts();
             default:
-                return null; // Handle error or return a default food
+                return null;
         }
     }
 }

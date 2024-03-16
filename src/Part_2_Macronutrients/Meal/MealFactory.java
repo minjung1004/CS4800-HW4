@@ -13,13 +13,10 @@ import Part_2_Macronutrients.Protein.PaleoProtein;
 import Part_2_Macronutrients.Protein.Protein;
 import Part_2_Macronutrients.Protein.VeganProtein;
 
-// Singleton implementaiton of abstract factory
+
 public class MealFactory implements MacronutrientFactory {
-
     private static MealFactory instance;
-
     private MealFactory(){}
-
     public static MealFactory getInstance() {
         if (instance == null) {
             instance = new MealFactory();
@@ -31,17 +28,14 @@ public class MealFactory implements MacronutrientFactory {
     public Carbs createCarbsFactory() {
         return Carbs.getInstance();
     }
-
     @Override
     public PaleoCarbs createPaleoCarbsFactory() {
         return PaleoCarbs.getInstance();
     }
-
     @Override
     public VeganCarbs createVeganCarbsFactory() {
         return VeganCarbs.getInstance();
     }
-
     @Override
     public NutAllergyCarbs createNutAllergyCarbsFactory() {
         return NutAllergyCarbs.getInstance();
@@ -51,12 +45,10 @@ public class MealFactory implements MacronutrientFactory {
     public Protein createProteinFactory() {
         return Protein.getInstance();
     }
-
     @Override
     public PaleoProtein createPaleoProteinFactory() {
         return PaleoProtein.getInstance();
     }
-
     @Override
     public VeganProtein createVeganProteinFactory() {
         return VeganProtein.getInstance();
@@ -66,17 +58,14 @@ public class MealFactory implements MacronutrientFactory {
     public Fats createFatsFactory() {
         return Fats.getInstance();
     }
-
     @Override
     public PaleoFats createPaleoFatsFactory() {
         return PaleoFats.getInstance();
     }
-
     @Override
     public VeganFats createVeganFatsFactory() {
         return VeganFats.getInstance();
     }
-
     @Override
     public NutAllergyFats createNutAllergyFatsFactory() {
         return NutAllergyFats.getInstance();

@@ -16,7 +16,7 @@ public class NutAllergyCarbs implements CarbsFactory{
 
     @Override
     public Food createCarbs() {
-        int random = (int) (Math.random() * 2); // Number of available fat options
+        int random = (int) (Math.random() * 2);
         switch (random) {
             case 0:
                 return new Cheese();
@@ -25,7 +25,7 @@ public class NutAllergyCarbs implements CarbsFactory{
             case 2:
                 return new Lentils();
             default:
-                return null; // Handle error or return a default food
+                return null;
         }
     }
 }
